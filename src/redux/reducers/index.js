@@ -1,7 +1,7 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux'
 
-// import subreducer from './subreducer';
+import api from './api'
 
 export default combineReducers({
-  // subreducer
-});
+  api
+})

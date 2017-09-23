@@ -1,25 +1,22 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { PureComponent } from 'react'
+import styled from 'styled-components'
 
-import './App.styl';
+import {
+  Footer,
+  Header,
+  Page
+} from '@organisms'
 
-class App extends React.PureComponent {
-  render() {
-    return <div>
-      <p>React starter</p>
-    </div>;
+const Main = styled.main``
+
+class App extends PureComponent {
+  render () {
+    return <Main>
+      <Header />
+      <Page />
+      <Footer />
+    </Main>
   }
 }
 
-App.propTypes = {};
-
-export default App;
-
-const mapStateToProps = () => ({});
-
-const mapDispatchToProps = {};
-
-export const AppContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default App

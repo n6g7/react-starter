@@ -1,13 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import { ThemeProvider } from 'styled-components'
 
-import { AppContainer } from './components/App';
-import store from './redux/store';
+import App from './components/App'
+import store from './redux/store'
+import theme from './theme'
 
 ReactDOM.render(
   <Provider store={store}>
-    <AppContainer />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </Provider>,
   document.getElementById('app')
-);
+)

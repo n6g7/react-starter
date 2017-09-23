@@ -1,32 +1,47 @@
-const path = require('path');
+const path = require('path')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
-  entry: './src/index.js',
-  module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel'
-      },
-      {
-        test: /\.styl(us)?$/,
-        exclude: /node_modules/,
-        loader: 'style!css!stylus'
-      },
-      {
-        test: /\.png$/,
-        exclude: /node_modules/,
-        loader: 'url!img'
-      }
-    ]
-  },
+  context: path.resolve(__dirname, 'src'),
+  entry: ['babel-polyfill', './index.js'],
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    alias: {
+      '@actions': path.resolve(__dirname, 'src/redux/actions'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
+      '@atoms': path.resolve(__dirname, 'src/components/atoms'),
+      '@molecules': path.resolve(__dirname, 'src/components/molecules'),
+      '@organisms': path.resolve(__dirname, 'src/components/organisms'),
+      '@redux': path.resolve(__dirname, 'src/redux'),
+      '@services': path.resolve(__dirname, 'src/services')
+    }
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js'
-  }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          'babel-loader'
+        ]
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          'url-loader'
+        ]
+      }
+    ]
+  },
+  devServer: {
+    contentBase: './dist',
+    historyApiFallback: true
+  },
+  plugins: [
+    new Dotenv()
+  ]
 }
