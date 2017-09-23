@@ -1,0 +1,36 @@
+version: 2
+
+jobs:
+  build:
+    working_directory: ~/project
+
+    docker:
+      - image: node:8
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-{{ .Branch }}-{{ checksum "package.json" }}
+            - v1-{{ .Branch }}
+            - v1-master-{{ checksum "package.json" }}
+            - v1-master
+
+      - run:
+          name: Install dependencies
+          command: yarn
+
+      - run:
+          name: Check yarn.lock is up to date
+          command: yarn check
+
+      - run:
+          name: Run tests
+          command: yarn test
+
+      - save_cache:
+          key: v1-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - ~/.yarn
+            - ~/project/node_modules
