@@ -28,4 +28,3 @@
 - Firebase (`firebase`, `redux-saga-firebase`)
 - React router (`react-router-dom`, `react-router-redux`, `history`)
 - VX (`@vx/axis`, `@vx/scale`, ...)
-- Stylus (`stylus`, `stylus-loader`)
