@@ -22,10 +22,6 @@ jobs:
           command: yarn
 
       - run:
-          name: Check yarn.lock is up to date
-          command: yarn check
-
-      - run:
           name: Run tests
           command: yarn test
 
