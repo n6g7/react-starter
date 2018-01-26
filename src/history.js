@@ -1,6 +1,6 @@
 import createHistory from 'history/createBrowserHistory'
 
-function parseUrl (url) {
+export function parseUrl (url) {
   const link = document.createElement('a')
   link.href = url
   return link

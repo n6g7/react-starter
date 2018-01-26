@@ -18,5 +18,8 @@ module.exports = {
   ],
   snapshotSerializers: [
     'enzyme-to-json/serializer'
-  ]
+  ],
+  testEnvironmentOptions: {
+    url: 'https://abc.def.ghi/base'
+  }
 }
