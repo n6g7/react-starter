@@ -1,34 +1,18 @@
-const webpack = require('webpack');
-const DashboardPlugin = require('webpack-dashboard/plugin');
+const webpack = require('webpack')
 
-const baseConfig = require('./webpack.config.js');
+const baseConfig = require('./webpack.config.js')
 
-module.exports = Object.assign({}, baseConfig, {
-  entry: [
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    baseConfig.entry
-  ],
-  module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'react-hot!babel'
-      },
-      {
-        test: /\.png$/,
-        exclude: /node_modules/,
-        loader: 'url!img'
-      }
-    ]
-  },
+module.exports = {
+  ...baseConfig,
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new DashboardPlugin()
+    ...baseConfig.plugins,
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
+  devtool: 'eval-source-map',
   devServer: {
-    contentBase: 'dist/',
+    contentBase: './dist',
+    historyApiFallback: true,
     hot: true
   }
-});
+}
