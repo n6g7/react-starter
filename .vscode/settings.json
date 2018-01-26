@@ -3,6 +3,8 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "javascript.validate.enable": false,
+  "jest.autoEnable": true,
+  "jest.pathToConfig": "jest.config.js",
   "standard.autoFixOnSave": false,
   "standard.enable": true,
 }
