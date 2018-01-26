@@ -3,7 +3,11 @@ const Dotenv = require('dotenv-webpack')
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  entry: ['babel-polyfill', './index.js'],
+  entry: [
+    'babel-polyfill',
+    'react-hot-loader/patch',
+    './index.js'
+  ],
   resolve: {
     alias: {
       '@actions': path.resolve(__dirname, 'src/redux/actions'),
