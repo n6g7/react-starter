@@ -22,11 +22,24 @@ jobs:
           command: yarn
 
       - run:
+          name: Install greenkeeper-lockfile
+          command: yarn global add greenkeeper-lockfile
+
+      - run:
+          name: Update lockfile with greenkeeper
+          command: greenkeeper-lockfile-update
+
+      - run:
           name: Run tests
           command: yarn test
+
+      - run:
+          name: Upload lockfile with greenkeeper
+          command: greenkeeper-lockfile-upload
 
       - save_cache:
           key: v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
+            - ~/.config/yarn
             - ~/.yarn
             - ~/project/node_modules
