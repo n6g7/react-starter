@@ -62,5 +62,10 @@
       "jest"
     ],
     "parser": "babel-eslint"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "babel-eslint"
+    ]
   }
 }
