@@ -22,8 +22,8 @@ jobs:
           command: yarn
 
       - run:
-          name: Install greenkeeper-lockfile
-          command: yarn global add greenkeeper-lockfile
+          name: Install global dependencies
+          command: yarn global add greenkeeper-lockfile coveralls
 
       - run:
           name: Update lockfile with greenkeeper
@@ -36,6 +36,14 @@ jobs:
       - run:
           name: Upload lockfile with greenkeeper
           command: greenkeeper-lockfile-upload
+
+      - run:
+          name: Send coverage to coveralls.io
+          command: |
+            if [ -z "$CIRCLE_PR_REPONAME" ];
+            then
+              cat coverage/lcov.info | coveralls;
+            fi
 
       - save_cache:
           key: v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
