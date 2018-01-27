@@ -31,7 +31,7 @@ jobs:
 
       - run:
           name: Run tests
-          command: yarn test
+          command: yarn test --coverage
 
       - run:
           name: Upload lockfile with greenkeeper
