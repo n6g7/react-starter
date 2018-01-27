@@ -1,6 +1,7 @@
 {
 	"recommendations": [
 		"chenxsan.vscode-standardjs",
-		"Orta.vscode-jest"
+		"Orta.vscode-jest",
+		"rebornix.project-snippets"
 	]
 }
