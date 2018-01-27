@@ -1,5 +1,7 @@
 # React starter
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/n6g7/react-starter.svg)](https://greenkeeper.io/)
+
 ## Getting started
 
 - Create a directory for your project: `mkdir my-project && cd my-project`
