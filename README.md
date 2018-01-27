@@ -1,6 +1,9 @@
 # React starter
 
+[![CircleCI](https://circleci.com/gh/n6g7/react-starter.svg?style=svg)](https://circleci.com/gh/n6g7/react-starter)
+[![Coverage Status](https://coveralls.io/repos/github/n6g7/react-starter/badge.svg?branch=master)](https://coveralls.io/github/n6g7/react-starter?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/n6g7/react-starter.svg)](https://greenkeeper.io/)
+[![Known Vulnerabilities](https://snyk.io/test/github/n6g7/react-starter/badge.svg?targetFile=package.json)](https://snyk.io/test/github/n6g7/react-starter?targetFile=package.json)
 
 ## Getting started
 
