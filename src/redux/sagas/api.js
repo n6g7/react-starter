@@ -8,15 +8,15 @@ import {
 
 import api from '@services/api'
 
-function * apiCallSaga () {
+export function * apiCallSaga () {
   try {
-    yield call(api.something)
+    yield call(api)
     yield put(apiSuccess())
   } catch (error) {
     yield put(apiFailure(error))
   }
 }
 
-export default function * apiSaga () {
+export default function * apiRootSaga () {
   yield takeLatest(types.API_CALL.REQUEST, apiCallSaga)
 }
