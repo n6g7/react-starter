@@ -1,3 +1,3 @@
-export default function () {
-  return window.fetch('...')
+export default function() {
+  return window.fetch("...")
 }

@@ -1,11 +1,11 @@
-import api from './api'
+import api from "./api"
 
-describe('api', () => {
+describe("api", () => {
   beforeEach(() => {
     window.fetch = jest.fn()
   })
 
-  it('renders well', () => {
+  it("renders well", () => {
     api()
     expect(window.fetch).toHaveBeenCalled()
   })

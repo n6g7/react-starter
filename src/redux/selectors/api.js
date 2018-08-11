@@ -1,8 +1,5 @@
-import { createSelector } from 'reselect'
+import { createSelector } from "reselect"
 
 const rawAPISelector = state => state.api
 
-export const isLoadingSelector = createSelector(
-  rawAPISelector,
-  api => api.loading
-)
+export const isLoadingSelector = createSelector(rawAPISelector, api => api.loading)

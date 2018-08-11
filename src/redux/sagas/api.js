@@ -1,14 +1,10 @@
-import { call, put, takeLatest } from 'redux-saga/effects'
+import { call, put, takeLatest } from "redux-saga/effects"
 
-import {
-  apiSuccess,
-  apiFailure,
-  types
-} from '@actions/api'
+import { apiSuccess, apiFailure, types } from "@actions/api"
 
-import api from '@services/api'
+import api from "@services/api"
 
-export function * apiCallSaga () {
+export function* apiCallSaga() {
   try {
     yield call(api)
     yield put(apiSuccess())
@@ -17,6 +13,6 @@ export function * apiCallSaga () {
   }
 }
 
-export default function * apiRootSaga () {
+export default function* apiRootSaga() {
   yield takeLatest(types.API_CALL.REQUEST, apiCallSaga)
 }

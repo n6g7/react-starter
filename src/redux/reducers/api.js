@@ -1,21 +1,21 @@
-import { types } from '@actions/api'
+import { types } from "@actions/api"
 
 const initialState = {
-  loading: false
+  loading: false,
 }
 
-export default function api (state = initialState, action = {}) {
+export default function api(state = initialState, action = {}) {
   switch (action.type) {
     case types.API_CALL.REQUEST:
       return {
         ...state,
-        loading: true
+        loading: true,
       }
     case types.API_CALL.SUCCESS:
     case types.API_CALL.FAILURE:
       return {
         ...state,
-        loading: false
+        loading: false,
       }
     default:
       return state
