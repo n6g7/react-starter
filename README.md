@@ -29,7 +29,8 @@
   - Dotenv plugin (`dotenv-webpack`)
   - Hot module reloading + React hot loader
 - Jest (`jest`)
-- Standard (`standard`, `babel-eslint`)
+- Prettier (`prettier`)
+- Eslint (`eslint`, `eslint-plugin-react`)
 
 ## What you could add on top
 
