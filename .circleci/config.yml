@@ -22,6 +22,10 @@ jobs:
           command: yarn
 
       - run:
+          name: Check lockfile is up-to-date
+          command: yarn check
+
+      - run:
           name: Install global dependencies
           command: yarn global add greenkeeper-lockfile coveralls
 
