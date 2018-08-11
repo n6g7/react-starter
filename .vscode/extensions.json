@@ -1,6 +1,8 @@
 {
 	"recommendations": [
-		"chenxsan.vscode-standardjs",
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"jpoissonnier.vscode-styled-components",
 		"Orta.vscode-jest",
 		"rebornix.project-snippets"
 	]
