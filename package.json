@@ -33,7 +33,7 @@
     "styled-components": "^3.2.5"
   },
   "devDependencies": {
-    "@babel/core": "7.0.0-rc.1",
+    "@babel/core": "7.4.5",
     "@babel/plugin-proposal-class-properties": "7.0.0-rc.1",
     "@babel/plugin-proposal-json-strings": "7.0.0-rc.1",
     "@babel/plugin-syntax-dynamic-import": "7.0.0-rc.1",
