@@ -2298,11 +2298,12 @@ enzyme-adapter-utils@^1.5.0:
     object.assign "^4.1.0"
     prop-types "^15.6.2"
 
-enzyme-to-json@^3.3.3:
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-3.3.4.tgz#67c6040e931182f183418af2eb9f4323258aa77f"
+enzyme-to-json@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/enzyme-to-json/-/enzyme-to-json-3.4.1.tgz#bd54b7fd545384e71491b67ebd8d9f456e12c02b"
+  integrity sha512-9W8fRlpDBf0hAsGnKP4OnhjkfYAyPt1ernypGg8FuIJMBv3rtshTEOPYBQCVEENrrXxsc9YbrDmk+RbhKarLcw==
   dependencies:
-    lodash "^4.17.4"
+    lodash "^4.17.12"
 
 enzyme@^3.3.0:
   version "3.4.1"
@@ -4240,6 +4241,11 @@ lodash.sortby@^4.7.0:
 lodash@^4.13.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
+
+lodash@^4.17.12:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
 log-symbols@^2.1.0:
   version "2.2.0"
